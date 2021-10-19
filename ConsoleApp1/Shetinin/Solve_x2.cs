@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace Shetinin
 {
     class Solve_x2 : Solve_x1
     {
@@ -20,13 +20,13 @@ namespace ConsoleApp1
             {
                 return solve_x1(b, c);
             }
-
+            Shetininlog.I().log("Это квадратное уравнение");
 
             float D = disc(a, b, c);
 
             if (D < 0)
             {
-                return null;
+                throw new ShetiniException("Уравнения не имеет корней");
             }
 
             //list = new List<double>(2);
